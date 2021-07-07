@@ -31,7 +31,7 @@ public class UserManager {
         int number = scanner.nextInt();
         scanner.nextLine();
         
-        Account account = new Account(type, number);
+        Account account = new Account(type, number, person);
 
     }
 

@@ -3,8 +3,9 @@ public class Account {
     private int mNumber;
     private Person mPerson; 
 
-    Account(int type, int number) {
+    Account(int type, int number, Person person) {
         mType = type;
         mNumber = number;
+        mPerson = person;
     }
 }
