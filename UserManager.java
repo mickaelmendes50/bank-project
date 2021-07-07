@@ -17,6 +17,23 @@ public class UserManager {
         scanner.nextLine();
 
         Person person = new Person(name, surname, cpf, phoneNumber);
+        createAccount(person);
+
+        scanner.close();
+    }
+
+    public static void createAccount(Person person) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Insira o tipo de conta");
+        int type = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Insira o numero da conta");
+        int number = scanner.nextInt();
+        scanner.nextLine();
+        
+        Account account = new Account(type, number);
 
         scanner.close();
     }
