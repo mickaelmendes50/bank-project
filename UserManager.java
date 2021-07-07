@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class UserManager {
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void registerUser() {
-        Scanner scanner = new Scanner(System.in);
 
         System.out.println("---- Register a new user ----");
         System.out.print("Name: ");
@@ -19,11 +19,9 @@ public class UserManager {
         Person person = new Person(name, surname, cpf, phoneNumber);
         createAccount(person);
 
-        scanner.close();
     }
 
     public static void createAccount(Person person) {
-        Scanner scanner = new Scanner(System.in);
         
         System.out.println("Insira o tipo de conta");
         int type = scanner.nextInt();
@@ -35,11 +33,9 @@ public class UserManager {
         
         Account account = new Account(type, number);
 
-        scanner.close();
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
         System.out.println("---- What do you want to do? ----");
         System.out.println("1 - Register a new user");
