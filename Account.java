@@ -1,11 +1,15 @@
 public class Account {
     private int mType;
-    private int mNumber;
-    private Person mPerson; 
+    private Person mPerson;
 
-    Account(int type, int number, Person person) {
+    private static int sNumber = 1;
+
+    Account(int type, Person person) {
         mType = type;
-        mNumber = number;
         mPerson = person;
+    }
+
+    public static void setsNumber() {
+        Account.sNumber++;
     }
 }
