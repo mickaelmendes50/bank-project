@@ -2,7 +2,7 @@ public class Account {
     private int mType;
     private Person mPerson;
 
-    private static int sNumber = 1;
+    private static int sNumber = 0;
 
     Account(int type, Person person) {
         mType = type;
@@ -11,5 +11,11 @@ public class Account {
 
     public static void setsNumber() {
         Account.sNumber++;
+    }
+
+    public String toString() {
+        String accountData = " - " + mType +
+                             "\n   Número: "+ sNumber;
+        return accountData;
     }
 }

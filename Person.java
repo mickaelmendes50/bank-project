@@ -21,4 +21,16 @@ public class Person {
         Account.setsNumber();
         accounts.add(newAccount);
     }
+
+    public String toString() {
+        String personData = "\n-----------------------------\n" +
+                            "\nName: " + mName + " " + mSurname +
+                            "\nCPF: " + mCPF +
+                            "\nPhone Number: " + mPhoneNumber + 
+                            "\nContas:\n";
+        for (int i = 0; i < accounts.size(); i++) {
+            personData += accounts.get(i);
+        }
+        return personData;
+    }
 }

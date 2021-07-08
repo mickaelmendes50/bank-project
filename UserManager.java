@@ -18,6 +18,7 @@ public class UserManager {
 
         Person person = new Person(name, surname, cpf, phoneNumber);
         person.createAccount(person, 1);
+        System.out.println(person.toString());
     }
 
     public static void main(String[] args) {
