@@ -1,21 +1,41 @@
 public class Account {
-    private int mType;
+    private String mType;
     private Person mPerson;
+    private int mNumber;
 
-    private static int sNumber = 0;
+    private static int sNumber = 1;
 
     Account(int type, Person person) {
-        mType = type;
+        setType(type);
         mPerson = person;
+        mNumber = sNumber;
+        setNumber();
     }
 
-    public static void setsNumber() {
+    public void setType(int type) {
+        switch (type) {
+            case 1:
+                mType = "Poupança";
+                break;
+            case 2:
+                mType = "Salário";
+                break;
+            case 3:
+                mType = "Corrente";
+                break;
+            default:
+                System.out.println("Not a valid option");
+                break;
+        }
+    }
+
+    public static void setNumber() {
         Account.sNumber++;
     }
 
     public String toString() {
         String accountData = " - " + mType +
-                             "\n   Número: "+ sNumber;
+                             "\n   Número: "+ mNumber;
         return accountData;
     }
 }

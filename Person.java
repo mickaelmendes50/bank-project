@@ -18,7 +18,6 @@ public class Person {
     // Cria uma conta 
     public void createAccount(Person person, int type) {        
         Account newAccount = new Account(type, person);
-        Account.setsNumber();
         accounts.add(newAccount);
     }
 
